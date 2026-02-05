@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="BitcoinVersus.tech publishes verifiably true reporting and research on Bitcoin mining, energy systems, and digital infrastructure." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://bitcoinversus.tech/" />
+
+  <meta property="og:title" content="BitcoinVersus.tech" />
+  <meta property="og:description" content="Verifiably true reporting and research on Bitcoin mining, energy systems, and digital infrastructure." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bitcoinversus.tech/" />
+
+  <title>BitcoinVersus.tech</title>
+
+  <style>
+    :root{
+      --bg:#0b0f0c;
+      --panel:#0f1611;
+      --text:#e8f3ea;
+      --muted:#a8c4b0;
+      --accent:#39ff14;
+      --line:rgba(57,255,20,.18);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1100px;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        radial-gradient(900px 400px at 20% -10%, rgba(57,255,20,.10), transparent 55%),
+        radial-gradient(700px 400px at 90% 10%, rgba(57,255,20,.06), transparent 55%),
+        linear-gradient(180deg, var(--bg), #070a08);
+      color:var(--text);
+      line-height:1.5;
+    }
+
+    a{ color:var(--text); text-decoration:none; }
+    a:hover{ color:var(--accent); }
+
+    .wrap{ max-width:var(--max); margin:0 auto; padding:26px 18px 60px; }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding:14px 16px;
+      border:1px solid var(--line);
+      background:rgba(15,22,17,.72);
+      backdrop-filter: blur(10px);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      position:sticky;
+      top:12px;
+      z-index:5;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width: 240px;
+    }
+
+    .logo{
+      width:36px;
+      height:36px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      display:grid;
+      place-items:center;
+      color:var(--accent);
+      background: linear-gradient(180deg, rgba(57,255,20,.12), rgba(57,255,20,.04));
+      box-shadow: inset 0 0 0 1px rgba(57,255,20,.08);
+      font-weight:800;
+      letter-spacing:.5px;
+    }
+
+    .brand h1{
+      margin:0;
+      font-size:16px;
+      line-height:1.2;
+      letter-spacing:.2px;
+    }
+
+    .brand p{
+      margin:2px 0 0;
+      font-size:12px;
+      color:var(--muted);
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .navlink{
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid transparent;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .navlink:hover{
+      border-color:var(--line);
+      background:rgba(57,255,20,.06);
+      color:var(--text);
+    }
+
+    .cta{
+      padding:10px 14px;
+      border-radius:12px;
+      border:1px solid rgba(57,255,20,.35);
+      background:rgba(57,255,20,.10);
+      color:var(--text);
+      font-size:13px;
+      font-weight:600;
+    }
+    .cta:hover{
+      background:rgba(57,255,20,.14);
+      border-color:rgba(57,255,20,.55);
+      color:var(--accent);
+    }
+
+    .hero{
+      margin-top:18px;
+      padding:34px 18px;
+      border-radius: calc(var(--radius) + 6px);
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(15,22,17,.80), rgba(15,22,17,.45));
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(500px 250px at 10% 20%, rgba(57,255,20,.16), transparent 55%),
+        radial-gradient(450px 240px at 90% 35%, rgba(57,255,20,.10), transparent 60%);
+      pointer-events:none;
+      opacity:.9;
+    }
+
+    .heroInner{
+      position:relative;
+      max-width: 880px;
+    }
+
+    .kicker{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color:var(--muted);
+      font-size:12px;
+      background: rgba(0,0,0,.18);
+    }
+
+    .dot{
+      width:8px;
+      height:8px;
+      border-radius:999px;
+      background:var(--accent);
+      box-shadow:0 0 18px rgba(57,255,20,.7);
+    }
+
+    .hero h2{
+      margin:14px 0 10px;
+      font-size:38px;
+      line-height:1.05;
+      letter-spacing:-.6px;
+    }
+
+    .hero p{
+      margin:0;
+      color:var(--muted);
+      font-size:16px;
+      max-width: 66ch;
+    }
+
+    .heroActions{
+      margin-top:18px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:rgba(0,0,0,.18);
+      color:var(--text);
+      font-weight:600;
+      font-size:14px;
+    }
+    .btn:hover{ background:rgba(57,255,20,.06); border-color:rgba(57,255,20,.35); color:var(--accent); }
+    .btnPrimary{
+      border-color:rgba(57,255,20,.45);
+      background:rgba(57,255,20,.10);
+    }
+    .btnPrimary:hover{ background:rgba(57,255,20,.14); }
+
+    main{ margin-top:18px; }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:14px;
+    }
+
+    .card{
+      grid-column: span 12;
+      border-radius:var(--radius);
+      border:1px solid var(--line);
+      background:rgba(15,22,17,.62);
+      box-shadow:var(--shadow);
+      padding:18px;
+    }
+
+    .card h3{
+      margin:0 0 8px;
+      font-size:16px;
+      letter-spacing:.2px;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .card a.inline{
+      color:var(--accent);
+      border-bottom:1px solid rgba(57,255,20,.35);
+    }
+    .card a.inline:hover{ border-bottom-color:rgba(57,255,20,.75); }
+
+    .split{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+
+    .pill{
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(0,0,0,.14);
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    footer{
+      margin-top:22px;
+      padding:18px;
+      border-radius:var(--radius);
+      border:1px solid var(--line);
+      background:rgba(0,0,0,.18);
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    .cols{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:12px;
+      margin-top:10px;
+    }
+
+    .smallLinks{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .smallLinks a{
+      color:var(--muted);
+      border-bottom:1px solid transparent;
+    }
+    .smallLinks a:hover{
+      color:var(--accent);
+      border-bottom-color:rgba(57,255,20,.35);
+    }
+
+    @media (min-width: 860px){
+      .card.one{ grid-column: span 4; }
+      .card.two{ grid-column: span 8; }
+      .cols{ grid-template-columns: 1fr 1fr; }
+      .hero{ padding:44px 28px; }
+      .hero h2{ font-size:46px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "BitcoinVersus.tech",
+    "url": "https://bitcoinversus.tech/",
+    "description": "Verifiably true reporting and research on Bitcoin mining, energy systems, and digital infrastructure."
+  }
+  </script>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#top" aria-label="BitcoinVersus.tech home">
+        <div class="logo" aria-hidden="true">BV</div>
+        <div>
+          <h1>BitcoinVersus.tech</h1>
+          <p>Verifiably True reporting on mining and infrastructure</p>
+        </div>
+      </a>
+
+      <nav aria-label="Primary">
+        <a class="navlink" href="#news">News</a>
+        <a class="navlink" href="#lexicon">Lexicon</a>
+        <a class="navlink" href="#research">Research</a>
+        <a class="navlink" href="#about">About</a>
+        <a class="cta" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="top">
+      <div class="heroInner">
+        <span class="kicker"><span class="dot" aria-hidden="true"></span> Mining, energy, and digital infrastructure</span>
+        <h2>Bitcoin mining analysis you can verify.</h2>
+        <p>
+          BitcoinVersus.tech publishes streamlined reporting, technical explainers, and research that can be checked,
+          cited, and replicated. No fluff. Clear sources. Clear numbers.
+        </p>
+
+        <div class="heroActions">
+          <a class="btn btnPrimary" href="#news">Read latest stories</a>
+          <a class="btn" href="#lexicon">Explore the Lexicon</a>
+          <a class="btn" href="#research">View research</a>
+        </div>
+
+        <div class="split" aria-label="Topics">
+          <span class="pill">ASIC efficiency</span>
+          <span class="pill">J/TH</span>
+          <span class="pill">Hashrate economics</span>
+          <span class="pill">Energy markets</span>
+          <span class="pill">Data center ops</span>
+        </div>
+      </div>
+    </section>
+
+    <main class="grid">
+      <section class="card two" id="news">
+        <h3>News</h3>
+        <p>
+          Add your newest posts here. Start with 3 to 6 entries and link each to a full article page.
+          You can later swap this for a CMS, RSS feed, or a simple JSON-powered list.
+        </p>
+
+        <div class="split" style="margin-top:14px">
+          <a class="btn" href="#" aria-disabled="true">Sample story link</a>
+          <a class="btn" href="#" aria-disabled="true">Sample story link</a>
+          <a class="btn" href="#" aria-disabled="true">Sample story link</a>
+        </div>
+      </section>
+
+      <section class="card one" id="lexicon">
+        <h3>Lexicon</h3>
+        <p>
+          A technician-first dictionary for mining operations. Define terms cleanly, keep sources tight, and expand over time.
+        </p>
+        <div class="split" style="margin-top:14px">
+          <a class="btn btnPrimary" href="#">Open Lexicon</a>
+        </div>
+      </section>
+
+      <section class="card one" id="research">
+        <h3>Research</h3>
+        <p>
+          Power Efficiency Theory, ASIC efficiency curves, and long-term modeling work.
+        </p>
+        <div class="split" style="margin-top:14px">
+          <a class="btn btnPrimary" href="#">Read research</a>
+        </div>
+      </section>
+
+      <section class="card two" id="about">
+        <h3>About</h3>
+        <p>
+          Editor’s Note: We volunteer daily to ensure the credibility of the information on this platform is Verifiably True.
+        </p>
+        <p style="margin-top:10px">
+          Founder and Senior Editor: Bill Burton. Coverage includes Bitcoin mining, digital infrastructure, energy,
+          and adjacent technology.
+        </p>
+      </section>
+
+      <section class="card" id="contact">
+        <h3>Contact</h3>
+        <p>
+          Use a simple mailto link for now. Later, add a form backend (Cloudflare Forms, Netlify Forms, or a tiny API).
+        </p>
+        <div class="split" style="margin-top:14px">
+          <a class="btn btnPrimary" href="mailto:contact@bitcoinversus.tech">Email contact@bitcoinversus.tech</a>
+          <a class="btn" href="https://bitcoinversus.tech/" rel="noopener">Visit bitcoinversus.tech</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="cols">
+        <div>
+          <div><strong style="color:var(--text)">BitcoinVersus.tech</strong></div>
+          <div style="margin-top:6px">
+            Informational only. Not financial advice.
+          </div>
+        </div>
+
+        <div>
+          <div class="smallLinks" aria-label="Footer links">
+            <a href="#news">News</a>
+            <a href="#lexicon">Lexicon</a>
+            <a href="#research">Research</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div style="margin-top:10px">
+            © <span id="year"></span> BitcoinVersus.tech
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
