@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> FULLSTACK U - About</title>
+</head>
+
+<body>
+    <h1>FullStack U</h1>
+    <p>I'm trying my best to expand my skill and knowledge.</p>
+<li><a href="frontpage.html"> Front Page</a></li>
+<li><a href="fullstack.html"> Full Stack Rule Book</a></li>
+<li><a href="backpage.html"> Back Page</a></li>
+<li><a href="about.html">Learn more about us</a></li>
+<li><a href="index.html"> Index </a></li>
+</body>
+
+</html><!DOCTYPE html>
+<html>
+
+<head>
+    <title> FULLSTACK U [Back Page]</title>
+</head>
+
+<body>
+    <h1>FullStack U</h1>
+    <p>Latest News: What is a Controllable Load Resource?</p>
+    <img src="lexiconpic1.png" alt="Lexicon Word of the Day: Controllable Load Resource">
+<li><a href="frontpage.html"> Front Page</a></li>
+<li><a href="fullstack.html">Full Stack Rule Book</a></li>
+<li><a href="about.html">Learn more about us</a></li>
+<li><a href="index.html"> Index </a></li>
+</body>
+
+</html><!DOCTYPE html>
+<html>
+
+<head>
+    <title> FULLSTACK U [Front Page]</title>
+</head>
+
+<body>
+    <h1>FullStack U FrontPage</h1>
+    <p>Where your Full Stack Training becomes reality</p>
+<li><a href="fullstack.html">Full Stack Rule Book</a></li>
+<li><a href="backpage.html"> Back Page</a></li>
+<li><a href="about.html">Learn more about us</a></li>
+<li><a href="index.html"> Index </a></li>
+</body>
+
+</html><!DOCTYPE html>
+<html>
+
+<head>
+    <title> FULLSTACK U [Rule Book]</title>
+</head>
+
+<body>
+    <h1>FullStack U Rule Book</h1>
+    <p>Rule number 1: Get to work. James 2:17</p>
+    <p>Rule number 2: Get some rest</p>
+    <p>Rule number 3: Keep Working, Don't Stop</p>
+      
+<li><a href="frontpage.html"> Front Page </a></li>
+<li><a href="backpage.html"> Back Page </a></li>
+<li><a href="about.html">Learn more about us</a></li>
+<li><a href="index.html"> Index </a></li>
+</body>
+
+</html><!DOCTYPE html>
+<html>
+
+<head>
+    <title>Index Page</title>
+</head>
+
+<body>
+    <h1> Welcome to my jurisdiction </h1>
+    <h2> h2 example </h2>
+    <ul>
+    <li> phone</li>
+    <li>keys</li>
+    <li>wallet</li>
+    </ul>
+    <p>This is a web page demonstrating how a website is built via html.</p>
+    <li><a href="frontpage.html"> Front Page</a></li>
+    <li><a href="fullstack.html">Full Stack Rule Book</a></li>
+    <li><a href="backpage.html"> Back Page</a></li>
+    <li><a href="about.html">Learn more about us</a></li>
+    </body>
+
+</html>
