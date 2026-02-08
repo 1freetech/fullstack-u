@@ -24,12 +24,47 @@
 
 <body>
     <h1>FullStack U</h1>
+    <time>4:20</time>
+    
+<figure>
+    <figcaption>
     <p>Latest News: What is a Controllable Load Resource?</p>
     <img src="lexiconpic1.png" alt="Lexicon Word of the Day: Controllable Load Resource">
+    </figcaption>
+</figure>
+
+<aside> 
 <li><a href="frontpage.html"> Front Page</a></li>
 <li><a href="fullstack.html">Full Stack Rule Book</a></li>
 <li><a href="about.html">Learn more about us</a></li>
 <li><a href="index.html"> Index </a></li>
+</aside>
+
+<figure>
+    <figcaption> 
+    <p>Lexicon Word of the Week: ERCOT</p>
+    <img src="ercot.png" alt="Lexicon Word of the Week: ERCOT">
+    </figcaption>
+</figure>
+
+<section>
+    <article>
+        <h3>Trending News Stories</h3>
+        <p>Sign up and become a Stacker today!</p>
+    </article>
+        Click on our <a href="about.html">about</a> page to learn more about Full Stack U
+</section>
+
+    <li><a href="frontpage.html"> Front Page</a></li>
+<li><a href="fullstack.html">Full Stack Rule Book</a></li>
+<li><a href="about.html">Learn more about us</a></li>
+<li><a href="index.html"> Index </a></li>
+
+<footer>
+    <time>4:20</time>
+    <p>&copy; FullStack U A Subsidiary of &copy;BitcoinVersus.tech &copy; All rights reserved. </p>
+</footer>
+
 </body>
 
 </html><!DOCTYPE html>
@@ -41,7 +76,23 @@
 
 <body>
     <h1>FullStack U FrontPage</h1>
+    <main>
+        <section>
+            <h2>FullStack U Mission<h2>
+            <p>We are dedicated to the acquiring and maintaining high-level full stack development skills so your engineers can be ready for all assignments.</p>
+            <p>We Respect the full stack way of life. It's not easy. But it's neccessary.</p>
+        </section>
+    </main>
+    <nav>
+        <ul>
+            <li><a href="fullstack.html">Full Stack Rule Book</a></li>
+            <li><a href="backpage.html"> Back Page</a></li>
+            <li><a href="about.html">Learn more about us</a></li>
+            <li><a href="index.html"> Index </a></li>
+        </ul>
+    </nav>
     <p>Where your Full Stack Training becomes reality</p>
+   
 <li><a href="fullstack.html">Full Stack Rule Book</a></li>
 <li><a href="backpage.html"> Back Page</a></li>
 <li><a href="about.html">Learn more about us</a></li>
@@ -77,11 +128,7 @@
 <body>
     <h1> Welcome to my jurisdiction </h1>
     <h2> h2 example </h2>
-    <ul>
-    <li> phone</li>
-    <li>keys</li>
-    <li>wallet</li>
-    </ul>
+   
     <p>This is a web page demonstrating how a website is built via html.</p>
     <li><a href="frontpage.html"> Front Page</a></li>
     <li><a href="fullstack.html">Full Stack Rule Book</a></li>
