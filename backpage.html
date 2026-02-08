@@ -47,15 +47,19 @@
 
     <label for="player rating">Player Rating:</label><br>
 
-    <input type="text" id="rating" name="rating"
+    <input type="number" id="rating" name="rating"
     
-    min="0" max="120"><br>
+    min="0" max="105"><br>
 
     <button type="submit">Submit Player Rating</button>
 
 </form>
+<form action="/submit" method="post">
+<label for="comments">NFL 2K27 Player Bio </label><br> 
+<textarea id="comments" name="comments" rows="5"cols="50"></textarea>
 
-
+<p><button type="submit">Submit Player Bio</button></p>
+</form>
 <footer>
     <time>4:20</time>
     <p>&copy; FullStack U A Subsidiary of &copy;BitcoinVersus.tech &copy; All rights reserved. </p>
