@@ -1,2 +1,2 @@
 # fullstack-u
-fullstack developerment training
+fullstack developer training
