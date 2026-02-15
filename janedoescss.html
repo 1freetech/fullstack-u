@@ -1,0 +1,161 @@
+/* Jane doe resume profile with dark mode toggle included. Remember that CSS goes into style
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jane Doe — Creative Tech Developer</title>
+    <style>
+        .grid {
+            display: grid;
+            gap: 12px;
+        }
+
+        .two-col {
+            display: grid;
+            gap: 12px;
+        }
+
+        @media (min-width: 720px) {
+            .grid {
+                grid-template-columns: 2fr 1fr;
+            }
+
+            .two-col {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        body {
+            margin: 16px;
+            font-family: Arial, sans-serif;
+        }
+
+        header,
+        nav,
+        main,
+        aside,
+        footer {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+.page {
+  padding: 1rem; 
+}
+
+#dark-toggle:checked ~ .page {
+  background-color: #121212;
+  color: #ffffff;
+}
+    </style>
+</head>
+
+<body>
+    
+    <input type="checkbox" id="dark-toggle"><label for="dark-toggle">🌙 Dark Mode</label>
+<div class="page">
+        <header>
+            <div>
+                <h1>Jane Doe</h1>
+                <div>Creative Technologist &amp; Developer</div>
+                <p>Blending storytelling, code, and emerging tech to prototype playful, human experiences.</p>
+            </div>
+            <div>
+                <span>📍 Brooklyn, NY</span>
+                <span>✉️ jane.doe@studio.fake</span>
+                <span>🌐 janedoe.dev</span>
+                <span>🎧 Ambient coder | Weekend ceramicist</span>
+            </div>
+        </header>
+
+        <div class="grid">
+            <section>
+                <h2>Profile</h2>
+                <p>I design and build interactive prototypes for installations, web, and mixed reality. Passionate about
+                    rapid experimentation, clear systems, and teams that ship bold ideas.</p>
+            </section>
+
+            <section>
+                <h2>At a Glance</h2>
+                <ul>
+                    <li><strong>Experience</strong> 8+ years shipping creative tech</li>
+                    <li><strong>Specialties</strong> Physical computing, generative UI, creative tooling</li>
+                    <li><strong>Collabs</strong> Museums, product teams, indie artists</li>
+                </ul>
+            </section>
+        </div>
+
+        <section>
+            <h2>Core Skills</h2>
+            <p>JavaScript/TypeScript, WebGL, Three.js, GSAP, React, Node.js, Arduino, rapid prototyping, storyboarding.
+            </p>
+        </section>
+
+        <section class="two-col">
+            <div>
+                <h2>Selected Projects</h2>
+                <div>
+                    <h3>Immersive Sound Canvas</h3>
+                    <p>Real-time audio-reactive visuals for a gallery opening; built with WebGL and custom GLSL shaders.
+                    </p>
+                </div>
+                <div>
+                    <h3>Playable Brand Story</h3>
+                    <p>Interactive microsite that turned a product launch into a short game; shipped in 4 weeks with
+                        React and GSAP.</p>
+                </div>
+                <div>
+                    <h3>Mixed Reality Sketchbook</h3>
+                    <p>Prototype that let illustrators draw in AR and export to the web; combined Three.js, WebXR, and a
+                        lightweight design system.</p>
+                </div>
+            </div>
+            <div>
+                <h2>Toolbox</h2>
+                <p>Figma to code, TouchDesigner, Ableton for sound tests, Notion/FigJam, quick microservices, CLI
+                    workflows, beta feature prototyping.</p>
+            </div>
+        </section>
+
+        <section class="two-col">
+            <div>
+                <h2>Experience</h2>
+                <div>
+                    <h3>Senior Creative Technologist — Studio North</h3>
+                    <p>Led cross-disciplinary teams on interactive installations and digital experiences; delivered 12+
+                        launches.</p>
+                    <p>2020 — Present</p>
+                </div>
+                <div>
+                    <h3>Prototype Engineer — Indie Labs</h3>
+                    <p>Built rapid proof-of-concepts for product teams, translating concept decks into working demos in
+                        days.</p>
+                    <p>2017 — 2020</p>
+                </div>
+                <div>
+                    <h3>Creative Developer — Freelance</h3>
+                    <p>Partnered with artists and small brands on motion-heavy sites and interactive projections.</p>
+                    <p>2015 — 2017</p>
+                </div>
+            </div>
+            <div>
+                <h2>Education &amp; Recognition</h2>
+                <div>
+                    <h3>BFA, Interactive Design</h3>
+                    <p>Parsons School of Design — Thesis on tangible interfaces.</p>
+                </div>
+                <div>
+                    <h3>Awards &amp; Press</h3>
+                    <p>Featured in Creative Coding Weekly; Shortlist at Awwwards for immersive microsite.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            Available for remote-friendly collaborations and quick prototypes. Let’s build something bright.
+        </footer>
+    </div>
+</body>
+
+</html>
