@@ -1,0 +1,46 @@
+/*On this page: https://achecks.org/checker/index.php you can paste the code from the website and run a test on your accessibility checker.*/
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Information</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .low-contrast { color: #aaaaaa; /* low contrast on white */ }
+        .button-like { background: #eee; padding: 8px 12px; border: 1px solid #ccc; display: inline-block; }
+        .layout-table td { padding: 6px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+
+    <h3>Course Information</h3>
+    <p class="low-contrast">This paragraph uses low-contrast text to indicate important information.</p>
+
+    <!-- Fixed: Added alt attribute as required by 1.1.1 -->
+    <img src="https://via.placeholder.com/150" alt="Placeholder image for course information">
+
+    <p>To learn more, #click here</a>.</p>
+
+    <!-- Fixed: Wrapped in proper <form>, added visible <label> with text, associated via for/id -->
+    <form>
+        <label for="fullname">Full name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name">
+        <button class="button-like">Submit</button>
+    </form>
+
+    <center>
+        <font size="4" color="blue">Deprecated presentation tags in use</font>
+    </center>
+
+    <table class="layout-table" role="presentation">
+        <tr>
+            <td>Left column</td>
+            <td>Right column</td>
+        </tr>
+    </table>
+
+    <h1 id="section">Overview</h1>
+    <p id="section">This paragraph reuses the same id as the heading.</p>
+
+</body>
+</html>
